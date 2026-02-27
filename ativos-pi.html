@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine Tecnológica - UNEB</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style-projetos.css">
+</head>
+
+<body>
+
+<div class="top-bar">
+    Universidade do Estado da Bahia – UNEB | Agência de Inovação
+</div>
+
+<header>
+    <div class="navbar">
+
+        <div class="logo-area">
+            <img src="imagens/logo_uneb.svg" alt="UNEB">
+            <div class="logo-text">
+                <span style="color: white;">Vitrine Tecnológica de Propriedade Intelectual</span>
+            </div>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav class="menu" id="nav-main-menu">
+            <a href="inicio.html">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Tipos de PI</a>
+            <a href="#">Transferência</a>
+            <a href="#" class="btn-destaque">Contato</a>
+        </nav>
+
+    </div>
+</header>
+
+<div class="dashboard">
+
+    <div>
+        <h2 id="indicator-total-assets">0</h2>
+        <small>Total de Ativos</small>
+    </div>
+
+    <div>
+        <h2 id="indicator-desenhos">10</h2>
+        <small>Desenhos Industriais</small>
+    </div>
+
+    <div>
+        <h2 id="indicator-softwares">81</h2>
+        <small>Softwares</small>
+    </div>
+
+    <div>
+        <h2 id="indicator-patentes">0</h2>
+        <small>Patentes</small>
+    </div>
+
+    <div>
+        <h2 id="indicator-marcas">0</h2>
+        <small>Marcas</small>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <input type="text" id="filter-search-input" placeholder="Buscar tecnologia...">
+
+        <h3>Tipo de PI</h3>
+        <div id="filter-type"></div>
+
+        <h3>Status</h3>
+        <div id="filter-status"></div>
+
+        <h3>Área Tecnológica</h3>
+        <div id="filter-area"></div>
+
+    </aside>
+
+    <main class="content">
+        <div class="cards" id="cards-container"></div>
+    </main>
+
+</div>
+
+<div class="modal" id="modal-details">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">X</span>
+        <div id="modal-content-details"></div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="script-projetos.js"></script>
+</body>
+</html>
+
+

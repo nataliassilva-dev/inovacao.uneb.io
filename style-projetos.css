@@ -1,0 +1,180 @@
+:root {
+    --azul-uneb: #003366;
+    --vermelho-uneb: #C00000;
+    --cinza-claro: #f4f6f9;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cinza-claro);
+}
+
+/* TOPO */
+.top-bar {
+    background: var(--vermelho-uneb);
+    color: white;
+    font-size: 13px;
+    padding: 6px 40px;
+    text-align: right;
+}
+
+/* HEADER */
+header {
+    background: var(--azul-uneb);
+    padding: 10px 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu .btn-destaque {
+    background: var(--vermelho-uneb);
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* DASHBOARD */
+.dashboard {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 3px solid var(--vermelho-uneb);
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 8px;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid var(--azul-uneb);
+}
+
+.tag {
+    background: var(--vermelho-uneb);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.card button {
+    background: var(--azul-uneb);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #f4f6f9;
+}
+
+.modal-content {
+    background: white;
+    width: 60%;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    color: var(--vermelho-uneb);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--azul-uneb);
+        position: absolute;
+        top: 110px;
+        right: 0;
+        width: 250px;
+        padding: 20px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
