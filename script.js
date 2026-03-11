@@ -27,11 +27,11 @@ function revealOnScroll() {
 
 const newsData = [
   {
-    title: "UNEB amplia registros de patentes em 2025",
-    date: "10 fev 2025",
+    title: "Mulheres na propriedade intelectual",
+    date: "10 março 2026",
     excerpt: "A universidade fortalece sua política de proteção intelectual com novos depósitos.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
-    link: "#"
+    image: "https://images.jota.info/wp-content/uploads/2026/03/business-idea-concept-with-bulb-scaled.jpg",
+    link: "https://www.jota.info/opiniao-e-analise/colunas/propriedade-intelectual-inovacao/mulheres-na-propriedade-intelectual"
   },
   {
     title: "Inscrições abertas em curso online sobre busca de informações de patentes",
@@ -256,3 +256,4 @@ counter.classList.add("started");
 counters.forEach(counter => {
 observer.observe(counter);
 });
+
