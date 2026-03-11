@@ -36,7 +36,8 @@ h1, h2, h3, h4{
   top:0;
   left:0;
   width:100%;
-  background:transparent;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(5px);
   z-index:1000;
 }
 
@@ -564,4 +565,5 @@ bottom:15px;
 }
 
 }
+
 
