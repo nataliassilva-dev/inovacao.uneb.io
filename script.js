@@ -73,3 +73,137 @@ function renderNews() {
 document.addEventListener("DOMContentLoaded", renderNews);
 
 window.addEventListener('scroll', revealOnScroll);
+
+/* =========================
+   HERO SLIDER PROFISSIONAL
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const dotsContainer = document.querySelector(".slider-dots");
+
+let index = 0;
+
+/* criar bolinhas */
+
+slides.forEach((_, i) => {
+
+const dot = document.createElement("span");
+dot.classList.add("dot");
+
+if(i === 0) dot.classList.add("active");
+
+dot.addEventListener("click", () => {
+index = i;
+updateSlider();
+});
+
+dotsContainer.appendChild(dot);
+
+});
+
+const dots = document.querySelectorAll(".dot");
+
+/* atualizar slider */
+
+function updateSlider(){
+
+slides.forEach(slide => slide.classList.remove("active"));
+slides[index].classList.add("active");
+
+dots.forEach(dot => dot.classList.remove("active"));
+dots[index].classList.add("active");
+
+}
+
+/* botões */
+
+next.addEventListener("click", () => {
+
+index++;
+
+if(index >= slides.length){
+index = 0;
+}
+
+updateSlider();
+
+});
+
+prev.addEventListener("click", () => {
+
+index--;
+
+if(index < 0){
+index = slides.length - 1;
+}
+
+updateSlider();
+
+});
+
+/* autoplay */
+
+setInterval(() => {
+
+index++;
+
+if(index >= slides.length){
+index = 0;
+}
+
+updateSlider();
+
+},5000);
+
+/* swipe mobile */
+
+let startX = 0;
+
+document.querySelector(".slider").addEventListener("touchstart", e => {
+startX = e.touches[0].clientX;
+});
+
+document.querySelector(".slider").addEventListener("touchend", e => {
+
+let endX = e.changedTouches[0].clientX;
+
+if(startX - endX > 50){
+
+index++;
+
+if(index >= slides.length) index = 0;
+
+updateSlider();
+
+}
+
+if(endX - startX > 50){
+
+index--;
+
+if(index < 0) index = slides.length - 1;
+
+updateSlider();
+
+}
+
+});
+
+});
+
+/* parallax hero */
+
+window.addEventListener("scroll", () => {
+
+const slides = document.querySelectorAll(".slide");
+const scroll = window.pageYOffset;
+
+slides.forEach(slide=>{
+slide.style.backgroundPositionY = scroll * 0.3 + "px";
+});
+
+});
