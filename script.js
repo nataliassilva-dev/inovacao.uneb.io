@@ -207,3 +207,52 @@ slide.style.backgroundPositionY = scroll * 0.3 + "px";
 });
 
 });
+
+const counters = document.querySelectorAll('.counter');
+
+const startCounter = (counter) => {
+
+let count = 0;
+const target = +counter.getAttribute('data-target');
+const increment = target / 200;
+
+const update = () => {
+
+count += increment;
+
+if(count < target){
+counter.innerText = Math.ceil(count);
+requestAnimationFrame(update);
+}
+else{
+counter.innerText = target;
+}
+
+};
+
+update();
+
+};
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+const counter = entry.target;
+
+if(!counter.classList.contains("started")){
+startCounter(counter);
+counter.classList.add("started");
+}
+
+}
+
+});
+
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+observer.observe(counter);
+});
