@@ -32,6 +32,7 @@ h1, h2, h3, h4{
   align-items: center;
   justify-content: space-between;
   padding: 18px 8%;
+  z-index: 1000
 }
 
 .logo {
@@ -49,6 +50,7 @@ h1, h2, h3, h4{
   display: flex;
   list-style: none;
   gap: 25px;
+  z-index: 999;
 }
 
 .nav-links a {
