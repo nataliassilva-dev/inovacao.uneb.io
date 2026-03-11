@@ -27,13 +27,17 @@ h1, h2, h3, h4{
 }
 
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 8%;
-  position: relative;
-  z-index: 1000;
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 8%;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background:transparent;
+  z-index:1000;
 }
 
 .logo {
@@ -560,3 +564,4 @@ bottom:15px;
 }
 
 }
+
