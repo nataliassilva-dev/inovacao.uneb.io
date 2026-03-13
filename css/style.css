@@ -108,14 +108,18 @@ h1, h2, h3, h4{
   justify-content:space-between;
   height:95px;
   padding:0 8%;
-  position:absolute;
+  position:relative;
   top:35px;
   left:0;
   width:100%;
-  background:rgba(0,0,0,0.35);
-  backdrop-filter:blur(5px);
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  transition:all .4s ease;
+  animation:menuSlide .8s ease;
   z-index:1000;
 }
+
 
 .logo {
   display: flex;
@@ -136,9 +140,50 @@ h1, h2, h3, h4{
 }
 
 .nav-links a {
-  color: white;
+  position: relative;
   text-decoration: none;
-  transition: 0.3s;
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* efeito ao passar o mouse */
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* linha underline escondida */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #00d4ff;
+  transition: width 0.3s ease;
+}
+
+/* animação da linha */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+@keyframes menuSlide{
+
+from{
+  transform:translateY(-70px);
+  opacity:0;
+}
+
+to{
+  transform:translateY(0);
+  opacity:1;
+}
+
 }
 
 /* ========================
@@ -412,6 +457,7 @@ MÉTRICAS
   font-size: 32px;
 }
 
+
 .cards {
   display: flex;
   gap: 30px;
@@ -580,11 +626,206 @@ MÉTRICAS
   }
 }
 
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 40px;
+/* =================================
+FOOTER INSTITUCIONAL
+================================= */
+
+.footer{
+
+background:#00264d;
+
+color:white;
+
+padding:70px 8% 30px;
+
+}
+
+.footer-container{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:40px;
+
+}
+
+.footer-col h4{
+
+margin-bottom:15px;
+
+font-size:18px;
+
+position:relative;
+
+}
+
+.footer-col h4::after{
+
+content:"";
+width:40px;
+height:2px;
+
+background:#00d4ff;
+
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+}
+
+.footer-col ul{
+
+list-style:none;
+
+}
+
+.footer-col ul li{
+
+margin-bottom:8px;
+
+}
+
+.footer-col ul li a{
+
+text-decoration:none;
+color:white;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.footer-col ul li a:hover{
+
+color:#00d4ff;
+
+}
+
+/* LOGO */
+
+.footer-brand img{
+
+height:50px;
+margin-bottom:15px;
+
+}
+
+.footer-brand p{
+
+font-size:14px;
+line-height:1.6;
+opacity:.85;
+
+}
+
+/* CONTATO */
+
+.footer-col p{
+
+font-size:14px;
+margin-bottom:6px;
+
+}
+
+/* REDES SOCIAIS */
+
+.footer-social{
+
+margin-top:12px;
+display:flex;
+gap:12px;
+
+}
+
+.footer-social a{
+
+width:35px;
+height:35px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#003366;
+
+border-radius:50%;
+
+text-decoration:none;
+color:white;
+
+transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+background:#00d4ff;
+
+color:#003366;
+
+}
+
+/* BARRA FINAL */
+
+.footer-bottom{
+
+margin-top:40px;
+
+border-top:1px solid rgba(255,255,255,0.15);
+
+padding-top:20px;
+
+text-align:center;
+
+font-size:13px;
+
+opacity:.8;
+
+}
+
+#backToTop{
+
+position:fixed;
+
+bottom:35px;
+right:35px;
+
+width:45px;
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:#003366;
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+
+z-index:2000;
+
+transition:.3s;
+
+}
+
+#backToTop:hover{
+
+background:#0055aa;
+
+transform:translateY(-3px);
+
 }
 
 .reveal.active {

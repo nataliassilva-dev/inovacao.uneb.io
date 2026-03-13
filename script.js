@@ -21,6 +21,19 @@ function revealOnScroll() {
   });
 }
 
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 80) {
+    navbar.classList.add("scrolled");
+  } 
+  else {
+    navbar.classList.remove("scrolled");
+  }
+
+});
+
 /* =========================
    Notícias dinâmicas PI
 ========================= */
@@ -298,6 +311,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // VLibras já é link externo, não precisa de JS extra
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 400){
+backToTop.style.display = "block";
+}else{
+backToTop.style.display = "none";
+}
+
+});
+
+backToTop.addEventListener("click", () => {
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
 });
 
 loadComponent("header","components/header.html")
