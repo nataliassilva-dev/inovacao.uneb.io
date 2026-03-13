@@ -87,6 +87,15 @@ body {
   border-color: #fff !important;
 }
 
+@media (max-width: 768px) {
+
+  .access-label,
+  .access-links{
+    display: none;
+  }
+
+}
+
 h1, h2, h3, h4{
     font-family: 'Montserrat', sans-serif;
 }
