@@ -21,7 +21,7 @@ function revealOnScroll() {
   });
 }
 
-const navbar = document.querySelector(".navbar");
+/*const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
 
@@ -332,6 +332,13 @@ top:0,
 behavior:"smooth"
 });
 
+});
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
 });
 
 loadComponent("header","components/header.html")
