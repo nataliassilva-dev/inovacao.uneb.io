@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TÍTULO -->
+  <title>AUI -Agência UNEB de Inovação</title>
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="imagens/incon-inovacao-1.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- BARRA DE ACESSIBILIDADE -->
+<div class="accessibility-bar">
+
+  <div class="accessibility-container">
+
+    <div class="access-label">Acessibilidade: </div>
+
+    <div class="access-links">
+      <a href="#conteudo">Ir para o conteúdo</a>
+      <a href="#menu">Ir para o menu</a>
+      <a href="#rodape">Ir para o rodapé</a>
+      <a href="https://www.gov.br/" target="_blank">Sites do Governo</a>
+    </div>
+
+    <div class="access-controls">
+      <button id="decrease-font">A-</button>
+      <button id="increase-font">A+</button>
+      <button id="toggle-contrast">Alto Contraste</button>
+      <button id="vlibras-btn" onclick="window.open('https://www.vlibras.gov.br/', '_blank')">VLibras</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ======================================================
+HEADER / NAVBAR
+====================================================== -->
+
+<header class="header">
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="imagens/logo aui branca.png" alt="Logo Agência UNEB de Inovação">
+    </div>
+
+    <ul class="nav-links">
+      <li class="submenu-parent">
+        <a href="#categorias">Início</a>
+        <ul class="submenu">
+          <li><a href="ativos-pi.html">Sobre</a></li>
+          <li><a href="processo-pi.html">Equipe</a></li>
+          <li><a href="processo-pi.html">Biblioteca de Documentos</a></li>
+        </ul>
+      </li>
+    <ul class="nav-links">
+      <li class="submenu-parent">
+        <a href="#categorias">Propriedade Intelectual</a>
+        <ul class="submenu">
+          <li><a href="ativos-pi.html">Processo de Proteção</a></li>
+          <li><a href="processo-pi.html">Vitrine Tecnológica</a></li>
+          <li><a href="processo-pi.html">Empresas Juniores</a></li>
+        </ul>
+      </li>
+    <ul class="nav-links">
+      <li class="submenu-parent">
+        <a href="#categorias">Projetos</a>
+        <ul class="submenu">
+          <li><a href="processo-pi.html">Auicast</a></li>
+          <li><a href="processo-pi.html">Agência Aberta</a></li>
+          <li><a href="processo-pi.html">Publicações</a></li>
+          <li><a href="ativos-pi.html">Projetos Estruturantes</a></li>
+        </ul>
+      </li>
+    <ul class="nav-links">
+      <li class="submenu-parent">
+        <a href="#categorias">Editais</a>
+        <ul class="submenu">
+          <li><a href="processo-pi.html">PIBATI</a></li>
+          <li><a href="processo-pi.html">PROINOVAÇÃO</a></li>
+        </ul>
+      </li>
+    <ul class="nav-links">
+      <li class="submenu-parent">
+        <a href="#categorias">Eventos</a>
+        <ul class="submenu">
+          <li><a href="processo-pi.html">Workshop de Inovação</a></li>
+          <li><a href="processo-pi.html">Semana Nacional de Ciência e Tecnologia</a></li>
+          <li><a href="processo-pi.html">Encontro Baiano de Ciência e Tecnologia</a></li>
+        </ul>
+      </li>
+
+    <!-- Menu Mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+  </nav>
+
+
+<!-- ======================================================
+HERO / SLIDER
+====================================================== -->
+
+<section class="hero">
+
+  <div class="slider">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active" style="background-image:url('imagens/inovacao.png')">
+
+      <div class="hero-content">
+        <h1 class="slide-title">Inovações que transformam realidades.</h1>
+        <p class="slide-text">Conheça as tecnologias desenvolvidas na UNEB.</p>
+        <a href="projetos.html" class="btn-primary">Explorar Projetos</a>
+      </div>
+
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" style="background-image:url('imagens/transferencia.png')">
+
+      <div class="hero-content">
+        <h1>Transferência de Tecnologia</h1>
+        <p>Conectando pesquisa acadêmica com o setor produtivo.</p>
+        <a href="transferencia.html" class="btn-primary">Saiba Mais</a>
+      </div>
+
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" style="background-image:url('imagens/light-bulb-electricity.jpg')">
+
+      <div class="hero-content">
+        <h1>Propriedade Intelectual</h1>
+        <p>Conheça as patentes e softwares registrados.</p>
+        <a href="ativos-pi.html" class="btn-primary">Ver Ativos</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SETAS DO SLIDER -->
+  <button class="slider-arrow prev">&#10094;</button>
+  <button class="slider-arrow next">&#10095;</button>
+
+  <!-- INDICADORES -->
+  <div class="slider-dots"></div>
+
+</section>
+
+<!-- ======================================================
+MÉTRICAS DE INOVAÇÃO
+====================================================== -->
+
+<section class="metrics">
+
+  <div class="metrics-container">
+
+    <div class="metric-item">
+      <h3 class="counter" data-target="91">0</h3>
+      <p>Tecnologias Desenvolvidas</p>
+    </div>
+
+    <div class="metric-item">
+      <h3 class="counter" data-target="81">0</h3>
+      <p>Softwares Registrados</p>
+    </div>
+
+    <div class="metric-item">
+      <h3 class="counter" data-target="27">0</h3>
+      <p>Marcas Registradas</p>
+    </div>
+
+    <div class="metric-item">
+      <h3 class="counter" data-target="10">0</h3>
+      <p>Desenhos Industriais</p>
+    </div>
+    
+    <div class="metric-item">
+      <h3 class="counter" data-target="1">0</h3>
+      <p>Patentes Concedidas</p>
+    </div>
+
+  </div>
+
+</section>
+
+</header>
+
+
+<!-- ======================================================
+DESTAQUES TECNOLÓGICOS
+====================================================== -->
+
+<section id="destaques" class="section">
+
+  <h2>Destaques Tecnológicos</h2>
+
+  <div class="cards">
+
+    <div class="card reveal">
+      <h3>Sistema Inteligente Educacional</h3>
+      <p>Plataforma com IA para análise de desempenho acadêmico.</p>
+      <a href="projetos.html" class="btn-secondary">Saiba Mais</a>
+    </div>
+
+    <div class="card reveal">
+      <h3>Metaverso no 2 de Julho: A Batalha de Pirajá</h3>
+      <p>Software Concedido.</p>
+      <a href="projetos.html" class="btn-secondary">Saiba Mais</a>
+    </div>
+
+    <div class="card reveal">
+      <h3>Eletrodo tipo wafer reativo quimicamente de alumínio e gálio</h3>
+      <p>Patente Concedida.</p>
+      <a href="projetos.html" class="btn-secondary">Saiba Mais</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+CATEGORIAS
+====================================================== -->
+
+<section id="acesso-rapido" class="section dark">
+  <h2>Acesso Rápido</h2>
+
+  <div class="grid">
+
+    <a href="projetos.html" class="grid-item">
+      <img src="imagens/biotecnologia.png" alt="proinovação">
+      <h3>PROINOVAÇÃO</h3>
+      <p>O Programa de Pesquisa Aplicada, Tecnologias Sociais e Inovação (PROINOVAÇÃO) visa o financiamento de projetos voltados ao desenvolvimento de ações de pesquisa aplicada, tecnologias sociais e inovação.</p>
+    </a>
+
+    <a href="projetos.html" class="grid-item">
+      <img src="imagens/saude.png" alt="vitrine">
+      <h3>Vitrine</h3>
+      <p>Vitrine tecnológica e de competências da Universidade do Estado da Bahia</p>
+    </a>
+
+    <a href="projetos.html" class="grid-item">
+      <img src="imagens/educacao.png" alt="pibati">
+      <h3>PIBATI</h3>
+      <p>O Programa Institucional de Bolsas de Apoio à Tecnologia e Inovação (PIBATI) é um programa de bolsas de apoio ao Sistema de Inovação da UNEB e estruturação da Agência UNEB de Inovação.</p>
+    </a>
+
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+NOTÍCIAS
+====================================================== -->
+
+<section id="noticias-pi" class="section">
+
+  <h2>Notícias</h2>
+
+  <div class="news-grid" id="news-container">
+    <!-- Conteúdo inserido via JavaScript -->
+  </div>
+
+  <a href="https://inovacao.uneb.br/todas-as-noticias/" class="btn-primary news-cta">Ver todas as notícias</a>
+
+</section>
+
+
+<!-- ======================================================
+FOOTER
+====================================================== -->
+
+<footer id="contato">
+
+  <h3>Agência UNEB de Inovação</h3>
+
+  <p>Email: agencia.inovacao@uneb.br</p>
+  <p>Salvador – BA | Brasil</p>
+
+</footer>
+
+
+<!-- ======================================================
+SCRIPTS
+====================================================== -->
+
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
